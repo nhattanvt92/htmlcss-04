@@ -734,12 +734,6 @@ h3 {
     padding: 130px 0;
 }
 
-.team__inner {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 .team__heading {
     text-align: center;
     margin-top: 15px;
@@ -749,12 +743,13 @@ h3 {
     display: flex;
     justify-content: space-between;
     gap: 35px;
-    width: 100%;
     margin-top: 78px;
 }
 
-.team__item {
-    /* flex-grow: 1; */
+.team-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .team-item__img-wrap {
@@ -763,16 +758,14 @@ h3 {
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    width: 234px;
-    height: 266px;
 }
 
 .team-item__img-wrap::after {
     position: absolute;
     content: "";
     display: block;
-    width: 234px;
-    height: 266px;
+    width: 100%;
+    height: 94%;
     border-radius: 129.5px;
     background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
     z-index: -99;
@@ -789,7 +782,7 @@ h3 {
 
 .team-item:nth-child(2) .team-item__img-wrap::before {
     background-image: url(../img/team-curve-img-2.svg);
-    top: 0;
+    top: 20px;
 }
 .team-item:nth-child(2) .team-item__img-wrap::after {
     background: linear-gradient(180deg, #ff997e 0%, #f3752e 100%);
@@ -806,7 +799,7 @@ h3 {
 
 .team-item:nth-child(4) .team-item__img-wrap::before {
     background-image: url(../img/team-curve-img-4.svg);
-    top: 0;
+    top: 20px;
 }
 
 .team-item:nth-child(4) .team-item__img-wrap::after {
@@ -817,9 +810,10 @@ h3 {
     position: absolute;
     background-repeat: no-repeat;
     content: "";
-    display: inline-block;
-    width: 270px;
+    width: calc(100% + 36px);
     height: 109px;
+    z-index: 99;
+    background-size: 100%;
 }
 
 .team-item__img {
@@ -847,12 +841,17 @@ h3 {
     margin-top: 14px;
 }
 
+.team__cta {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+}
+
 .team__btn {
     --width: 193px;
     --height: 56px;
     --background: transparent;
     --color: var(--primary-color);
-    margin-top: 48px;
 }
 
 .team__btn:hover {
