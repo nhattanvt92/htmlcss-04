@@ -750,6 +750,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 16px;
 }
 
 .team-item__img-wrap {
@@ -915,6 +916,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 44px;
+    padding: 0 88px;
 }
 
 .pricing__item {
@@ -1005,4 +1007,220 @@ h3 {
     rotate: -45deg;
     margin-bottom: 4px;
     margin-right: 8px;
+}
+
+/* ------ Reviews ------ */
+
+.reviews {
+    padding: 130px 0 65px;
+}
+
+.reviews-inner {
+    display: flex;
+    align-items: center;
+}
+
+.reviews__avatar {
+    position: relative;
+    display: flex;
+    width: 274px;
+    margin-left: 44px;
+    translate: 0 -30px;
+}
+
+.reviews__avatar::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 350px;
+    border-radius: 137px;
+    background: #ffda54;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.reviews__avatar-img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 137px;
+}
+
+.reviews__content {
+    margin-left: auto;
+}
+
+.reviews__heading {
+    color: #000958;
+    font-family: Sora;
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.19;
+}
+
+.reviews__desc {
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.55;
+    max-width: 553px;
+    margin-top: 24px;
+}
+
+.reviews__name {
+    display: flex;
+    align-items: center;
+    color: #282828;
+    font-family: Sora;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 34px;
+}
+
+.reviews__name::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background: #000;
+    margin-right: 8px;
+}
+
+.reviews__cta {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.reviews__cta-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.reviews__cta-dot--active,
+.reviews__cta-dot:hover {
+    background: var(--primary-color);
+}
+
+.reviews__cta-dot--active {
+    width: 24px;
+}
+
+.reviews__slide-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: color 0.25s, background-color 0.25s;
+    translate: 0 50%;
+}
+
+.reviews__slide-btn:last-of-type {
+    margin-left: 76px;
+}
+
+.reviews__slide-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* ------ blog ------ */
+
+.blog {
+    padding: 65px 0 131px;
+}
+
+.blog__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog__desc {
+    max-width: 350px;
+}
+
+.blog__btn {
+    margin-top: 24px;
+    --height: 56px;
+    --width: 182px;
+    --background: #fffaf5;
+    --color: var(--primary-color);
+}
+
+.blog__btn:hover {
+    text-decoration: underline;
+}
+
+.blog__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 48px;
+    margin-top: 54px;
+}
+
+.blog-item__img-wrap {
+    position: relative;
+    width: 100%;
+    height: 362px;
+    border-radius: 24px;
+    background: #90ccff;
+}
+
+.blog-item:nth-child(2) .blog-item__img-wrap {
+    background: #ff997e;
+}
+
+.blog-item:nth-child(3) .blog-item__img-wrap {
+    background: #5bd6e2;
+}
+
+.blog-item__time {
+    display: inline-block;
+    color: #fff;
+    font-family: Sora;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 26px 0 0 36px;
+}
+
+.blog-item__img {
+    position: absolute;
+    display: inline-block;
+    width: 90%;
+    height: 296px;
+    object-fit: cover;
+    bottom: 0;
+    right: 0;
+}
+
+.blog-item__info {
+    margin-top: 28px;
+}
+
+.blog-item__title {
+    color: #000958;
+    font-family: Sora;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.54;
+}
+
+.blog-item__desc {
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.71;
+    margin-top: 16px;
+    letter-spacing: 0.09px;
 }
